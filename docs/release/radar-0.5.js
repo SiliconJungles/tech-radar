@@ -233,7 +233,7 @@ function radar_visualization(config) {
         .attr("y", -rings[i].radius + 62)
         .attr("text-anchor", "middle")
         .style("fill", "#e5e5e5")
-        .style("font-family", "Arial, Helvetica")
+        .style("font-family", "'Roboto Condensed', Arial, Helvetica")
         .style("font-size", 42)
         .style("font-weight", "bold")
         .style("pointer-events", "none")
@@ -260,7 +260,7 @@ function radar_visualization(config) {
     radar.append("text")
       .attr("transform", translate(title_offset.x, title_offset.y))
       .text(config.title)
-      .style("font-family", "Arial, Helvetica")
+      .style("font-family", "'Roboto Condensed', Arial, Helvetica")
       .style("font-size", "34");
 
     // footer
@@ -268,7 +268,7 @@ function radar_visualization(config) {
       .attr("transform", translate(footer_offset.x, footer_offset.y))
       .text("▲ moved up     ▼ moved down")
       .attr("xml:space", "preserve")
-      .style("font-family", "Arial, Helvetica")
+      .style("font-family", "'Roboto Condensed', Arial, Helvetica")
       .style("font-size", "10");
 
     // legend
@@ -280,13 +280,13 @@ function radar_visualization(config) {
           legend_offset[quadrant].y - 45
         ))
         .text(config.quadrants[quadrant].name)
-        .style("font-family", "Arial, Helvetica")
+        .style("font-family", "'Roboto Condensed', Arial, Helvetica")
         .style("font-size", "18");
       for (var ring = 0; ring < 4; ring++) {
         legend.append("text")
           .attr("transform", legend_transform(quadrant, ring))
           .text(config.rings[ring].name)
-          .style("font-family", "Arial, Helvetica")
+          .style("font-family", "'Roboto Condensed', Arial, Helvetica")
           .style("font-size", "12")
           .style("font-weight", "bold");
         legend.selectAll(".legend" + quadrant + ring)
@@ -296,7 +296,7 @@ function radar_visualization(config) {
               .attr("class", "legend" + quadrant + ring)
               .attr("transform", function(d, i) { return legend_transform(quadrant, ring, i); })
               .text(function(d, i) { return d.id + ". " + d.label; })
-              .style("font-family", "Arial, Helvetica")
+              .style("font-family", "'Roboto Condensed', Arial, Helvetica")
               .style("font-size", "11");
       }
     }
@@ -392,7 +392,7 @@ function radar_visualization(config) {
         .attr("y", 3)
         .attr("text-anchor", "middle")
         .style("fill", "#fff")
-        .style("font-family", "Arial, Helvetica")
+        .style("font-family", "'Roboto Condensed', Arial, Helvetica")
         .style("font-size", function(d) { return blip_text.length > 2 ? "8" : "9"; })
         .style("pointer-events", "none")
         .style("user-select", "none");
